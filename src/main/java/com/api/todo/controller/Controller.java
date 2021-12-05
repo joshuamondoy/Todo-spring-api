@@ -36,11 +36,12 @@ public class Controller {
 ////		throw new RuntimeException("Something went wrong here in the server");
 //		return new todoList(,"admin", "Go somewhere",true, new Date());
 //	}
-	// localhost:8080/todo-list/description
-//	@GetMapping(path="todo-list/{description}")
-//	public todoList todoDescription(@PathVariable String description) {
-//		return new todoList(1, String.format("Username: %s ", description ),"Go somewhere", true, new Date());
-//	}
+//	localhost:8080/todo-list/description
+	@GetMapping(path="todo-list/{username}")
+	public List<TodoList> todoDescription(@PathVariable String username) {
+//		return new TodoList((long) 1, String.format("Username: %s ", description ),"Go somewhere", true, new Date());
+		return todoRepository.findByUsername(username);
+	}
 	
 	
 

@@ -2,20 +2,26 @@ package com.api.todo.controller.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Entity
+@Table(name="todo_list")
 public class TodoList {
 	@Id
 	@GeneratedValue
 	private Long id;
-	
+	@Column(name="username")
 	private String username;
+	@Column(name="description")
 	private String description;
+	@Column(name="is_done")
 	private boolean isDone;
+	@Column(name="target_date")
 	private Date targetDate;
 
 	public TodoList(Long id, String username, String description, boolean isDone, Date targetDate) {

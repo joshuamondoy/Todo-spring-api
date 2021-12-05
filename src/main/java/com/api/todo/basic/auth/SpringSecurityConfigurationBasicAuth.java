@@ -10,6 +10,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @EnableWebSecurity
 public class SpringSecurityConfigurationBasicAuth extends WebSecurityConfigurerAdapter {
 	
+	// what happened here is we extends the WebSecurityConfigurerAdapter and configure it
+	// username and password is already set in application.properties
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.api.todo.controller.entity.TodoList;
 
 
-// getall
+// this class is for hardcode data to display on each http request from the frontend
 @Service
 public class TodoHardcodedService {
 	private static List<TodoList> todos = new ArrayList<>();
